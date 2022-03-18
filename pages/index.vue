@@ -5,7 +5,7 @@
       <Overview :overview="overview" />
       <DepositValidatorChart :stake-validator="stakeValidator" />
       <ValidatorDistributionChart :list="validatorDistribution" />
-      <Detail />
+      <!-- <Detail /> -->
       <Info />
       <Footer />
     </div>
