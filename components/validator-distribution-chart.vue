@@ -31,6 +31,7 @@ export default {
         show: true,
         formatter: '{b} : {c} ({d}%)'
       },
+      color: ['#FF6B7A', '#08C6F8', '#F0944F', '#F9D153', '#E35695', '#AC0DF7', '#1B17E0', '#6EE076', '#A7FB88', '#E11818'],
       series: [
         {
           name: 'Access From',
@@ -63,6 +64,7 @@ export default {
         orient: 'vertical',
         right: -10
       },
+      color: ['#FF6B7A', '#08C6F8', '#F0944F', '#F9D153', '#E35695', '#AC0DF7', '#1B17E0', '#6EE076', '#A7FB88', '#E11818'],
       series: [
         {
           name: 'Access From',

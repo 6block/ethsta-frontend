@@ -4,7 +4,7 @@
       <Logo class="flex items-end" />
       <img src="@/assets/img/share/github.png" class="w-6 h-6 cursor-pointer hover:opacity-75">
     </div>
-    <div class="text-center py-1 bg-primary-900 text-white font-bold cursor-pointer text-sm lg:text-base">
+    <div class="text-center py-1 bg-primary-400 text-white font-bold cursor-pointer text-sm lg:text-base">
       {{ $t("keywords") }}
     </div>
   </div>

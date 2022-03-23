@@ -5,7 +5,7 @@
       <Overview :overview="overview" />
       <DepositValidatorChart :stake-validator="stakeValidator" />
       <ValidatorDistributionChart :list="validatorDistribution" />
-      <!-- <Detail /> -->
+      <Detail :list="detail" />
       <Info />
       <Footer />
     </div>
@@ -25,10 +25,12 @@ export default {
         stake: stakeValidator.map(item => item.staked_eth),
         validator: stakeValidator.map(item => item.validator_number),
       }
+      const detail = await $axios.$get('/detail ')
       return {
         overview,
         validatorDistribution,
-        stakeValidator
+        stakeValidator,
+        detail
       }
     } catch (err) {
       if (err?.response) {
