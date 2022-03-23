@@ -9,7 +9,7 @@
             {{ $t("overview.totalDeposit") }}
           </h1>
           <p class="text-primary-400 font-bold pt-1 text-sm">
-            {{ overview.total_deposit | eth(1) }}
+            {{ overview.total_deposit | locale }} ETH
           </p>
         </div>
       </div>
@@ -20,7 +20,7 @@
             {{ $t("overview.sevenDayDeposit") }}
           </h1>
           <p class="text-primary-400 font-bold pt-1 text-sm">
-            {{ overview.deposit_7d | eth(4) }}
+            {{ overview.deposit_7d | locale }} ETH
           </p>
         </div>
       </div>
