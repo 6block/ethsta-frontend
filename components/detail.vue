@@ -13,8 +13,17 @@
             <td class="text-center font-bold w-48 text-sm">
               {{ $t('detail.name') }}
             </td>
-            <td class="text-center font-bold w-20 text-sm">
+            <td class="text-center font-bold w-20 text-sm flex items-center justify-start">
               {{ $t('detail.share') }}
+              <el-popover
+                placement="bottom"
+                width="200"
+                trigger="hover"
+                content="Validator Percentage"
+                class="ml-2"
+              >
+                <img slot="reference" src="@/assets/img/share/info.png" class="w-4 h-4 cursor-pointer my-2 mr-2">
+              </el-popover>
             </td>
             <td class="text-center font-bold w-24 text-sm">
               {{ $t('detail.totalDeposit') }}(ETH)
@@ -38,21 +47,13 @@
         </thead>
         <tbody>
           <tr v-for="(item, index) in list" :key="index" class="hover:bg-gray-200 border-b border-gray-200">
-            <td class="text-center text-xs">
+            <td class="text-center text-xs py-2">
               {{ index + 1 }}
             </td>
             <td class="text-center text-xs">
               {{ item.name }}
             </td>
-            <td class="text-center flex items-center justify-start text-xs">
-              <el-popover
-                placement="right"
-                width="200"
-                trigger="hover"
-                content="Validator Percentage"
-              >
-                <img slot="reference" src="@/assets/img/share/info.png" class="w-5 h-5 cursor-pointer my-2 mr-2">
-              </el-popover>
+            <td class="text-left text-xs pl-2">
               {{ item.share.toFixed(3) }}%
             </td>
             <td class="text-center text-xs">
