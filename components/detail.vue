@@ -68,10 +68,10 @@
               {{ item.validators_7d }}
             </td>
             <td class="text-center w-32 text-xs underline font-bold text-primary-400 cursor-pointer">
-              <span @click="download(item)">{{ item.eth1_addr_number }}</span>
+              <span @click="download(item, 1)">{{ item.eth1_addr_number }}</span>
             </td>
             <td class="text-center w-32 text-xs underline font-bold text-primary-400 cursor-pointer">
-              <span @click="download(item)">{{ item.eth2_addr_number }}</span>
+              <span @click="download(item, 2)">{{ item.eth2_addr_number }}</span>
             </td>
           </tr>
         </tbody>
@@ -90,8 +90,8 @@ export default {
     }
   },
   methods: {
-    download(item) {
-      console.log(item)
+    download(item, number) {
+      window.location.href = `https://ethsta.com/data/address-download/${item.name}_eth${number}.0.csv`
     }
   }
 }

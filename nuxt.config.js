@@ -51,7 +51,7 @@ export default {
     'nuxt-i18n'
   ],
   axios: {
-    baseURL: 'https://test.ethsta.com/api/'
+    baseURL: 'https://ethsta.com/api/'
   },
   i18n: {
     locales: [
