@@ -26,10 +26,10 @@
               </el-popover>
             </td>
             <td class="text-center font-bold w-32 text-xs">
-              {{ $t('detail.totalDeposit') }}(ETH)
+              {{ $t('detail.totalDeposit') }} (ETH)
             </td>
             <td class="text-center font-bold w-28 text-xs">
-              {{ $t('detail.deposit7d') }}(ETH)
+              {{ $t('detail.deposit7d') }} (ETH)
             </td>
             <td class="text-center font-bold w-32 text-xs">
               {{ $t('detail.totalValidators') }}
