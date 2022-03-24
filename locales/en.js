@@ -5,9 +5,9 @@ export default {
   overview: {
     title: 'Overview',
     totalDeposit: 'Total Deposit',
-    sevenDayDeposit: '7d Deposit',
+    sevenDayDeposit: '7d New Deposit',
     totalValidators: 'Total Validators',
-    sevenDayValidators: '7d Validators'
+    sevenDayValidators: '7d New Validators'
   },
   depositValidatorChart: {
     title: 'Deposit Balance & Validators',
