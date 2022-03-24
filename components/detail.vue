@@ -7,13 +7,13 @@
       <table class="w-full" style="table-layout:fixed">
         <thead class="border-b border-gray-300">
           <tr>
-            <td class="text-center font-bold w-8 text-xs">
+            <td class="text-center font-bold w-4 text-xs">
               {{ $t('detail.number') }}
             </td>
             <td class="text-center font-bold w-48 text-xs">
               {{ $t('detail.name') }}
             </td>
-            <td class="text-center font-bold w-20 text-xs flex items-center justify-start">
+            <td class="text-center font-bold w-16 text-xs flex items-center justify-start">
               {{ $t('detail.share') }}
               <el-popover
                 placement="bottom"
@@ -28,7 +28,7 @@
             <td class="text-center font-bold w-32 text-xs">
               {{ $t('detail.totalDeposit') }} (ETH)
             </td>
-            <td class="text-center font-bold w-28 text-xs">
+            <td class="text-center font-bold w-36 text-xs">
               {{ $t('detail.deposit7d') }} (ETH)
             </td>
             <td class="text-center font-bold w-32 text-xs">
