@@ -57,16 +57,16 @@
               {{ (item.share * 100).toFixed(3) }}%
             </td>
             <td class="text-center text-xs">
-              {{ item.total_deposit | locale }}
+              {{ item.total_deposit | flag }}{{ item.total_deposit | locale }}
             </td>
             <td class="text-center text-xs">
-              {{ item.deposit_7d | locale }}
+              {{ item.deposit_7d | flag }}{{ item.deposit_7d | locale }}
             </td>
             <td class="text-center text-xs">
-              {{ item.total_validators | locale }}
+              {{ item.total_validators | flag }}{{ item.total_validators | locale }}
             </td>
             <td class="text-center text-xs">
-              {{ item.validators_7d | locale }}
+              {{ item.validators_7d | flag }}{{ item.validators_7d | locale }}
             </td>
             <td class="text-center text-xs underline font-bold text-primary-400 cursor-pointer">
               <span @click="download(item, 1)">{{ item.eth1_addr_number | locale }}</span>

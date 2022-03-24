@@ -12,6 +12,10 @@ function addAmountDelimiters(string) {
   )
 }
 
+function flag(num) {
+  return num > 0 ? '+' : num < 0 ? '-' : ''
+}
+
 export function localeAmount(value) {
   if (typeof value === 'number') {
     return toLocaleString(value)
@@ -19,6 +23,8 @@ export function localeAmount(value) {
     return addAmountDelimiters(value)
   }
 }
+
+Vue.filter('flag', flag)
 
 Vue.filter('locale', localeAmount)
 
