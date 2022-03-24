@@ -54,7 +54,7 @@
               {{ item.name }}
             </td>
             <td class="text-left text-xs pl-2">
-              {{ item.share.toFixed(3) }}%
+              {{ (item.share * 100).toFixed(3) }}%
             </td>
             <td class="text-center text-xs">
               {{ item.total_deposit }}

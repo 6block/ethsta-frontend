@@ -10,7 +10,7 @@ export default {
     sevenDayValidators: '7d Validators'
   },
   depositValidatorChart: {
-    title: 'Deposit Balance & Validators during last 7 days',
+    title: 'Deposit Balance & Validators',
     depositBalance: 'Deposit Balance',
     validators: 'Validators'
   },
