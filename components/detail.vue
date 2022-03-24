@@ -7,13 +7,13 @@
       <table class="w-full" style="table-layout:fixed">
         <thead class="border-b border-gray-300">
           <tr>
-            <td class="text-center font-bold w-8 text-sm">
+            <td class="text-center font-bold w-8 text-xs">
               {{ $t('detail.number') }}
             </td>
-            <td class="text-center font-bold w-48 text-sm">
+            <td class="text-center font-bold w-48 text-xs">
               {{ $t('detail.name') }}
             </td>
-            <td class="text-center font-bold w-20 text-sm flex items-center justify-start">
+            <td class="text-center font-bold w-20 text-xs flex items-center justify-start">
               {{ $t('detail.share') }}
               <el-popover
                 placement="bottom"
@@ -25,22 +25,22 @@
                 <img slot="reference" src="@/assets/img/share/info.png" class="w-4 h-4 cursor-pointer my-2 mr-2">
               </el-popover>
             </td>
-            <td class="text-center font-bold w-24 text-sm">
+            <td class="text-center font-bold w-32 text-xs">
               {{ $t('detail.totalDeposit') }}(ETH)
             </td>
-            <td class="text-center font-bold w-28 text-sm">
+            <td class="text-center font-bold w-28 text-xs">
               {{ $t('detail.deposit7d') }}(ETH)
             </td>
-            <td class="text-center font-bold w-24 text-sm">
+            <td class="text-center font-bold w-32 text-xs">
               {{ $t('detail.totalValidators') }}
             </td>
-            <td class="text-center font-bold w-28 text-sm">
+            <td class="text-center font-bold w-28 text-xs">
               {{ $t('detail.validators7d') }}
             </td>
-            <td class="text-center font-bold w-28 text-sm">
+            <td class="text-center font-bold w-20 text-xs">
               {{ $t('detail.eth1AddrNum') }}
             </td>
-            <td class="text-center font-bold w-28 text-sm">
+            <td class="text-center font-bold w-20 text-xs">
               {{ $t('detail.eth2AddrNum') }}
             </td>
           </tr>
@@ -57,22 +57,22 @@
               {{ (item.share * 100).toFixed(3) }}%
             </td>
             <td class="text-center text-xs">
-              {{ item.total_deposit }}
+              {{ item.total_deposit | locale }}
             </td>
             <td class="text-center text-xs">
-              {{ item.deposit_7d }}
+              {{ item.deposit_7d | locale }}
             </td>
             <td class="text-center text-xs">
-              {{ item.total_validators }}
+              {{ item.total_validators | locale }}
             </td>
             <td class="text-center text-xs">
-              {{ item.validators_7d }}
+              {{ item.validators_7d | locale }}
             </td>
             <td class="text-center text-xs underline font-bold text-primary-400 cursor-pointer">
-              <span @click="download(item, 1)">{{ item.eth1_addr_number }}</span>
+              <span @click="download(item, 1)">{{ item.eth1_addr_number | locale }}</span>
             </td>
             <td class="text-center text-xs underline font-bold text-primary-400 cursor-pointer">
-              <span @click="download(item, 2)">{{ item.eth2_addr_number }}</span>
+              <span @click="download(item, 2)">{{ item.eth2_addr_number | locale }}</span>
             </td>
           </tr>
         </tbody>
