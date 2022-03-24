@@ -40,7 +40,7 @@ export default {
           data: this.list.map(item => {
             return {
               value: item.validator_number,
-              name: item.name.replace('-address', '').replace('-contract', '')
+              name: item.name.replace('-address', '').replace('-contract', '').replace('others', 'Others')
             }
           }).sort((a, b) => a.validator_number - b.validator_number),
           emphasis: {
@@ -73,7 +73,7 @@ export default {
           data: this.list.map(item => {
             return {
               value: item.validator_number,
-              name: item.name.replace('-address', '').replace('-contract', '')
+              name: item.name.replace('-address', '').replace('-contract', '').replace('others', 'Others')
             }
           }).sort((a, b) => a.validator_number - b.validator_number),
           emphasis: {
