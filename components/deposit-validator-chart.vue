@@ -53,8 +53,8 @@ export default {
         data: this.stakeValidator.time
       },
       yAxis: [
-        { type: 'value', show: true, name: 'ETH' },
-        { type: 'value', show: true, name: 'Validators' }
+        { type: 'value', show: true, name: 'ETH', alignTicks: true },
+        { type: 'value', show: true, name: 'Validators', alignTicks: true }
       ],
       series: [
         {
@@ -62,7 +62,6 @@ export default {
           yAxisIndex: 0,
           type: 'line',
           symbol: 'none',
-          sampling: 'lttb',
           itemStyle: {
             color: 'rgb(255, 70, 131)'
           },
@@ -73,7 +72,6 @@ export default {
           yAxisIndex: 1,
           type: 'line',
           symbol: 'none',
-          sampling: 'lttb',
           itemStyle: {
             color: 'rgb(126, 65, 205)'
           },

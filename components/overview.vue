@@ -1,7 +1,7 @@
 <template>
   <div class="pb-6 px-2 lg:px-0">
     <Title :label="$t('overview.title')" />
-    <div class="hidden md:flex justify-between items-center">
+    <div class="hidden lg:flex justify-between items-center">
       <div class="flex-1 mr-8 shadow-container px-2 py-6 rounded-md flex items-center justify-between">
         <img src="@/assets/img/home/deposit.png" class="w-12">
         <div class="flex-1 pb-1 ml-1">
@@ -20,7 +20,7 @@
             {{ $t("overview.sevenDayDeposit") }}
           </h1>
           <p class="text-primary-400 font-bold pt-1 text-sm">
-            {{ overview.deposit_7d | locale }} ETH
+            {{ overview.deposit_7d | flag }}{{ overview.deposit_7d | locale }} ETH
           </p>
         </div>
       </div>
@@ -42,14 +42,14 @@
             {{ $t("overview.sevenDayValidators") }}
           </h1>
           <p class="text-primary-400 font-bold pt-1 text-sm">
-            {{ overview.validators_7d | locale }}
+            {{ overview.validators_7d | flag }}{{ overview.validators_7d | locale }}
           </p>
         </div>
       </div>
     </div>
-    <div class="md:hidden">
-      <div class="flex items-center justify-between">
-        <div class="flex-1 mr-5 shadow-container px-2 py-4 rounded-md flex items-center">
+    <div class="lg:hidden">
+      <div class="md:flex items-center justify-between">
+        <div class="flex-1 md:mr-5 shadow-container px-2 py-4 rounded-md flex items-center">
           <img src="@/assets/img/home/deposit.png" class="w-12">
           <div class="flex-1 pb-1 ml-1">
             <h1 class="text-gray-500 text-sm">
@@ -60,7 +60,7 @@
             </p>
           </div>
         </div>
-        <div class="flex-1 shadow-container px-2 py-4 rounded-md flex items-center">
+        <div class="mt-5 md:mt-0 flex-1 shadow-container px-2 py-4 rounded-md flex items-center">
           <img src="@/assets/img/home/deposit7d.png" class="w-12">
           <div class="flex-1 pb-1 ml-1">
             <h1 class="text-gray-500 text-sm">
@@ -72,8 +72,8 @@
           </div>
         </div>
       </div>
-      <div class="flex items-center justify-between mt-5">
-        <div class="flex-1 mr-5 shadow-container px-2 py-4 rounded-md flex items-center">
+      <div class="md:flex items-center justify-between mt-5">
+        <div class="flex-1 md:mr-5 shadow-container px-2 py-4 rounded-md flex items-center">
           <img src="@/assets/img/home/validator.png" class="w-12">
           <div class="flex-1 pb-1 ml-1">
             <h1 class="text-gray-500 text-sm">
@@ -84,7 +84,7 @@
             </p>
           </div>
         </div>
-        <div class="flex-1 shadow-container px-2 py-4 rounded-md flex items-center">
+        <div class="mt-5 md:mt-0 flex-1 shadow-container px-2 py-4 rounded-md flex items-center">
           <img src="@/assets/img/home/validator7d.png" class="w-12">
           <div class="flex-1 pb-1 ml-1">
             <h1 class="text-gray-500 text-sm">

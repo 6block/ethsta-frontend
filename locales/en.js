@@ -1,7 +1,7 @@
 export default {
-  head: 'EthSta.com',
+  head: 'EthSta.com | Ethereum Staking, States & Statistics',
   keywords: 'Ethereum Staking Pools',
-  description: 'Description: EthSta.com analyzes Ethereum blockchain data, showing the staking, states and statistics through tables and charts',
+  description: 'EthSta.com analyzes Ethereum blockchain data, showing the staking, states and statistics through tables and charts',
   overview: {
     title: 'Overview',
     totalDeposit: 'Total Deposit',

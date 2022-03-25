@@ -2,7 +2,7 @@ import messages from './locales/index.js'
 export default {
   head() {
     return {
-      title: `${this.$t('head')} | ${this.$t('keywords')} & ${this.$t('description')}`,
+      title: `${this.$t('head')}`,
       htmlAttrs: {
         lang: 'en'
       },

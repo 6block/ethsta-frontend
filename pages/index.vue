@@ -20,7 +20,7 @@ export default {
       const validatorDistribution = await $axios.$get('/validator-distribution')
       let stakeValidator = await $axios.$get('/stake-validator')
       stakeValidator = {
-        time: stakeValidator.map(item => moment(item.timestamp * 1000).format('YYYY-MM-DD HH:mm:ss')),
+        time: stakeValidator.map(item => moment(item.timestamp * 1000).format('YYYY-MM-DD')),
         stake: stakeValidator.map(item => item.staked_eth),
         validator: stakeValidator.map(item => item.validator_number),
       }

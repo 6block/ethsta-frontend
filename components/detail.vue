@@ -13,17 +13,19 @@
             <td class="text-center font-bold w-48 text-xs">
               {{ $t('detail.name') }}
             </td>
-            <td class="text-center font-bold w-16 text-xs flex items-center justify-start">
-              {{ $t('detail.share') }}
-              <el-popover
-                placement="bottom"
-                width="200"
-                trigger="hover"
-                content="Validator Percentage"
-                class="ml-2"
-              >
-                <img slot="reference" src="@/assets/img/share/info.png" class="w-4 h-4 cursor-pointer my-2 mr-2">
-              </el-popover>
+            <td class="text-center font-bold w-20 text-xs">
+              <div class="flex items-center justify-center">
+                {{ $t('detail.share') }}
+                <el-popover
+                  placement="bottom"
+                  width="200"
+                  trigger="hover"
+                  content="Validator Percentage"
+                  class="ml-2"
+                >
+                  <img slot="reference" src="@/assets/img/share/info.png" class="w-4 h-4 cursor-pointer my-2 mr-2">
+                </el-popover>
+              </div>
             </td>
             <td class="text-center font-bold w-32 text-xs">
               {{ $t('detail.totalDeposit') }} (ETH)
@@ -57,21 +59,21 @@
               {{ (item.share * 100).toFixed(3) }}%
             </td>
             <td class="text-center text-xs">
-              {{ item.total_deposit | flag }}{{ item.total_deposit | locale }}
+              {{ item.total_deposit | locale }}
             </td>
             <td class="text-center text-xs">
               {{ item.deposit_7d | flag }}{{ item.deposit_7d | locale }}
             </td>
             <td class="text-center text-xs">
-              {{ item.total_validators | flag }}{{ item.total_validators | locale }}
+              {{ item.total_validators | locale }}
             </td>
             <td class="text-center text-xs">
               {{ item.validators_7d | flag }}{{ item.validators_7d | locale }}
             </td>
-            <td class="text-center text-xs underline font-bold text-primary-400 cursor-pointer">
+            <td class="text-center text-xs underline font-bold text-primary-400 cursor-pointer hover:opacity-75">
               <span @click="download(item, 1)">{{ item.eth1_addr_number | locale }}</span>
             </td>
-            <td class="text-center text-xs underline font-bold text-primary-400 cursor-pointer">
+            <td class="text-center text-xs underline font-bold text-primary-400 cursor-pointer hover:opacity-75">
               <span @click="download(item, 2)">{{ item.eth2_addr_number | locale }}</span>
             </td>
           </tr>
