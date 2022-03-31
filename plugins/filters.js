@@ -13,7 +13,7 @@ function addAmountDelimiters(string) {
 }
 
 function flag(num) {
-  return num > 0 ? '+' : num < 0 ? '-' : ''
+  return num > 0 ? '+' : ''
 }
 
 export function localeAmount(value) {
