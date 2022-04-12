@@ -1,7 +1,8 @@
 <template>
   <div class="px-2 lg:px-0">
     <Title :label="$t('entityValidatorsChart.title')" />
-    <div id="entity-validators-chart" class="h-128"></div>
+    <div id="entity-validators-chart" class="hidden md:block h-128"></div>
+    <div id="entity-validators-mobile-chart" class="md:hidden h-128"></div>
   </div>
 </template>
 <script>import moment from 'moment'
@@ -17,13 +18,15 @@ export default {
   },
   data() {
     return {
-      chart: null
+      chart: null,
+      mobileChart: null
     }
   },
   mounted() {
     window.onresize = () => {
       if (this.chart) {
         this.chart.resize()
+        this.mobileChart.resize()
       }
     }
     let timestamp = new Set()
@@ -61,6 +64,7 @@ export default {
       legend: {
         data: lengendData
       },
+      color: ['#FF6B7A', '#08C6F8', '#F0944F', '#F9D153', '#E35695', '#AC0DF7', '#1B17E0', '#6EE076', '#A7FB88', '#E11818'],
       grid: {
         left: 60,
         right: 0,
@@ -100,7 +104,10 @@ export default {
       series
     }
     this.chart = this.$echarts.init(document.getElementById('entity-validators-chart'))
+    this.mobileChart = this.$echarts.init(document.getElementById('entity-validators-mobile-chart'))
     this.chart.setOption(option)
+    option.grid.top = 160
+    this.mobileChart.setOption(option)
   }
 }
 </script>
