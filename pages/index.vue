@@ -3,7 +3,7 @@
     <Header />
     <div class="lg:w-240 mx-auto">
       <Overview :overview="overview" />
-      <!-- <DepositValidatorChart :stake-validator="stakeValidator" /> -->
+      <DepositValidatorChart :stake-validator="stakeValidator" />
       <ValidatorDistributionChart :list="validatorDistribution" />
       <EntityValidatorsChart :list="entityValidators" />
       <Detail :list="detail" />
@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-// import moment from 'moment'
+import moment from 'moment'
 
 export default {
   async asyncData({ $axios, error }) {
@@ -20,17 +20,17 @@ export default {
       const overview = await $axios.$get('/overview')
       const validatorDistribution = await $axios.$get('/validator-distribution')
       const entityValidators = await $axios.$get('/entity-stake-validator')
-      // let stakeValidator = await $axios.$get('/stake-validator')
-      // stakeValidator = {
-      //   time: stakeValidator.map(item => moment(item.timestamp * 1000).format('YYYY-MM-DD')),
-      //   stake: stakeValidator.map(item => item.staked_eth),
-      //   validator: stakeValidator.map(item => item.validator_number),
-      // }
+      let stakeValidator = await $axios.$get('/stake-validator')
+      stakeValidator = {
+        time: stakeValidator.map(item => moment(item.timestamp * 1000).format('YYYY-MM-DD')),
+        stake: stakeValidator.map(item => item.staked_eth),
+        validator: stakeValidator.map(item => item.validator_number),
+      }
       const detail = await $axios.$get('/detail ')
       return {
         overview,
         validatorDistribution,
-        // stakeValidator,
+        stakeValidator,
         detail,
         entityValidators
       }
