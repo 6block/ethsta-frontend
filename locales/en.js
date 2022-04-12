@@ -17,6 +17,9 @@ export default {
   validatorDistribution: {
     title: 'Validator Distribution'
   },
+  entityValidatorsChart: {
+    title: 'Entity Validators'
+  },
   detail: {
     title: 'Detail',
     number: 'No.',
