@@ -4,8 +4,8 @@
     <div class="lg:w-240 mx-auto">
       <Overview :overview="overview" />
       <!-- <DepositValidatorChart :stake-validator="stakeValidator" /> -->
-      <EntityValidatorsChart :list="entityValidators" />
       <ValidatorDistributionChart :list="validatorDistribution" />
+      <EntityValidatorsChart :list="entityValidators" />
       <Detail :list="detail" />
       <Footer />
     </div>

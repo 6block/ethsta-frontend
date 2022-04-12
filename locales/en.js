@@ -18,7 +18,7 @@ export default {
     title: 'Validator Distribution'
   },
   entityValidatorsChart: {
-    title: 'Validators Over Time'
+    title: 'Top Validators Over Time',
   },
   detail: {
     title: 'Detail',

@@ -73,6 +73,7 @@ export default {
       },
       tooltip: {
         trigger: 'axis',
+        bottom: 0,
         axisPointer: {
           type: 'cross',
           label: {
