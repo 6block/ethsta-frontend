@@ -43,6 +43,12 @@ export default {
       },
       tooltip: {
         trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+          label: {
+            backgroundColor: '#6a7985'
+          }
+        },
         position: pt => {
           return [pt[0], '10%']
         }

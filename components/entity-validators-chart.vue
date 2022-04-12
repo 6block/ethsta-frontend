@@ -21,7 +21,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.list)
     window.onresize = () => {
       if (this.chart) {
         this.chart.resize()
@@ -49,25 +48,33 @@ export default {
         name: item.name,
         type: 'line',
         symbol: 'none',
-        data: seriesDataList
+        data: seriesDataList,
+        stack: 'Total',
+        areaStyle: {},
+        emphasis: {
+          focus: 'series'
+        },
       })
     })
 
     const option = {
       legend: {
-        data: lengendData,
-        type: 'scroll',
-        orient: 'vertical',
-        right: -60
+        data: lengendData
       },
       grid: {
         left: 60,
-        right: 160,
-        top: 10,
+        right: 0,
+        top: 80,
         bottom: 25
       },
       tooltip: {
         trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+          label: {
+            backgroundColor: '#6a7985'
+          }
+        },
         confine: true,
         formatter: params => {
           if (params instanceof Array) {
