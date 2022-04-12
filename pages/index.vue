@@ -3,9 +3,9 @@
     <Header />
     <div class="lg:w-240 mx-auto">
       <Overview :overview="overview" />
+      <EntityValidatorsChart :list="entityValidators" />
       <DepositValidatorChart :stake-validator="stakeValidator" />
       <ValidatorDistributionChart :list="validatorDistribution" />
-      <EntityValidatorsChart :list="entityValidators" />
       <Detail :list="detail" />
       <Footer />
     </div>
