@@ -64,7 +64,7 @@ export default {
       legend: {
         data: lengendData
       },
-      color: ['#FF6B7A', '#08C6F8', '#F0944F', '#F9D153', '#E35695', '#AC0DF7', '#1B17E0', '#6EE076', '#A7FB88', '#E11818'],
+      color: ['#E11818', '#A7FB88', '#6EE076', '#1B17E0', '#AC0DF7', '#E35695', '#F9D153', '#F0944F', '#08C6F8', '#FF6B7A'],
       grid: {
         left: 60,
         right: 0,
@@ -102,7 +102,7 @@ export default {
       yAxis: [
         { type: 'value', show: true, alignTicks: true },
       ],
-      series
+      series: series.reverse()
     }
     this.chart = this.$echarts.init(document.getElementById('entity-validators-chart'))
     this.mobileChart = this.$echarts.init(document.getElementById('entity-validators-mobile-chart'))
