@@ -31,7 +31,7 @@ export default {
         show: true,
         formatter: '{b} : {c} ({d}%)'
       },
-      color: ['#FF6B7A', '#08C6F8', '#F0944F', '#F9D153', '#E35695', '#AC0DF7', '#1B17E0', '#6EE076', '#A7FB88', '#E11818'],
+      color: ['#D32F2F', '#F44336', '#FF9800', '#673AB7', '#9D27B0', '#E91E63', '#FF4081', '#4051B5', '#2196F3', '#04A8F4', '#00BBD4', '#029688', '#4CAF50', '#CDDD39', '#A7FB88', '#212121', '#455964', '#607D8B', '#D0D8DB'],
       series: [
         {
           name: 'Access From',
@@ -64,7 +64,7 @@ export default {
         orient: 'vertical',
         right: -55
       },
-      color: ['#FF6B7A', '#08C6F8', '#F0944F', '#F9D153', '#E35695', '#AC0DF7', '#1B17E0', '#6EE076', '#A7FB88', '#E11818'],
+      color: ['#D32F2F', '#F44336', '#FF9800', '#673AB7', '#9D27B0', '#E91E63', '#FF4081', '#4051B5', '#2196F3', '#04A8F4', '#00BBD4', '#029688', '#4CAF50', '#CDDD39', '#A7FB88', '#212121', '#455964', '#607D8B', '#D0D8DB'],
       series: [
         {
           name: 'Access From',

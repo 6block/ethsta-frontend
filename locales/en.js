@@ -20,6 +20,9 @@ export default {
   entityValidatorsChart: {
     title: 'Top Validators Over Time',
   },
+  hashratePercentChart: {
+    title: 'HashRate Percent',
+  },
   detail: {
     title: 'Detail',
     number: 'No.',

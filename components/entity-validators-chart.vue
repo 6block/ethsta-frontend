@@ -64,7 +64,7 @@ export default {
       legend: {
         data: lengendData
       },
-      color: ['#E11818', '#A7FB88', '#6EE076', '#1B17E0', '#AC0DF7', '#E35695', '#F9D153', '#F0944F', '#08C6F8', '#FF6B7A'],
+      color: ['#D32F2F', '#F44336', '#FF9800', '#673AB7', '#9D27B0', '#E91E63', '#FF4081', '#4051B5', '#2196F3', '#04A8F4', '#00BBD4', '#029688', '#4CAF50', '#CDDD39', '#A7FB88', '#212121', '#455964', '#607D8B', '#D0D8DB'],
       grid: {
         left: 60,
         right: 0,

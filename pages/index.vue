@@ -6,6 +6,7 @@
       <EntityValidatorsChart :list="entityValidators" />
       <DepositValidatorChart :stake-validator="stakeValidator" />
       <ValidatorDistributionChart :list="validatorDistribution" />
+      <HashratePercentChart :data-set="hashratePercent" />
       <Detail :list="detail" />
       <Footer />
     </div>
@@ -27,12 +28,14 @@ export default {
         validator: stakeValidator.map(item => item.validator_number),
       }
       const detail = await $axios.$get('/detail ')
+      const hashratePercent = await $axios.$get('/attack-51-percent')
       return {
         overview,
         validatorDistribution,
         stakeValidator,
         detail,
-        entityValidators
+        entityValidators,
+        hashratePercent
       }
     } catch (err) {
       if (err?.response) {
