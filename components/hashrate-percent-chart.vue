@@ -37,7 +37,7 @@ export default {
       symbol: 'none',
       silent: true,
       data: [
-        { yAxis: '50' }
+        { yAxis: '60' }
       ],
       lineStyle: {
         show: true,
