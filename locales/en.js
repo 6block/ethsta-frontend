@@ -21,7 +21,7 @@ export default {
     title: 'Top Validators Over Time',
   },
   hashratePercentChart: {
-    title: 'HashRate Percent',
+    title: 'Distribution Of Entity',
   },
   detail: {
     title: 'Detail',

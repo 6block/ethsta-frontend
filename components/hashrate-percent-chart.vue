@@ -36,6 +36,9 @@ export default {
     const markLine = {
       symbol: 'none',
       silent: true,
+      label: {
+        formatter: '66%',
+      },
       data: [
         { yAxis: '66' }
       ],
