@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt --port 3001",
+    "dev": "nuxt --port 4040",
     "build": "nuxt build",
     "start": "nuxt start --port 8445",
     "generate": "nuxt generate",
@@ -13,12 +13,13 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/pwa": "^3.0.2",
+    "bignumber.js": "^9.1.0",
     "core-js": "^3.15.1",
     "echarts": "^5.3.1",
     "element-ui": "^2.15.2",
-    "moment": "^2.29.1",
     "nuxt": "^2.15.7",
-    "nuxt-i18n": "^6.28.1"
+    "nuxt-i18n": "^6.28.1",
+    "vue2-flip-countdown": "^0.12.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.1",
@@ -28,6 +29,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^2.0.0",
+    "moment": "^2.29.4",
     "postcss": "^8.4.8",
     "tailwindcss": "^3.0.23"
   }
