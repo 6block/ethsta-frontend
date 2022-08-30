@@ -3,13 +3,13 @@
     <Title :label="$t('ttd.title')" />
     <no-ssr>
       <div class="md:flex items-center justify-center">
-        <span class="md:-mt-4 mb-4 md:mb-0 md:mr-4 block text-center md:text-left text-sm">
+        <span class="md:-mt-4 mb-4 md:mb-0 md:mr-4 block text-center md:text-left font-bold">
           {{ $t('ttd.sevenDayCountDown') }}
           <span class="text-primary-400 font-bold">
             {{ formatTime(predictCurveSevenDay) }}
           </span>
           {{ $t('ttd.remain') }}
-          &nbsp;
+          &nbsp;&nbsp;
         </span>
         <TtdCountDown
           :end-time="predictCurveSevenDay"
@@ -18,7 +18,7 @@
     </no-ssr>
     <no-ssr>
       <div class="md:flex items-center mt-4 justify-center">
-        <span class="md:-mt-4 mb-4 md:mb-0 md:mr-4 block text-center md:text-left text-sm">
+        <span class="md:-mt-4 mb-4 md:mb-0 md:mr-4 block text-center md:text-left font-bold">
           {{ $t('ttd.fourteenDayCountDown') }}
           <span class="text-primary-400 font-bold">
             {{ formatTime(predictCurveFourteenDay) }}
@@ -32,7 +32,7 @@
     </no-ssr>
     <no-ssr>
       <div class="md:flex items-center mt-4 justify-center">
-        <span class="md:-mt-4 mb-4 md:mb-0 md:mr-4 block text-center md:text-left text-sm">
+        <span class="md:-mt-4 mb-4 md:mb-0 md:mr-4 block text-center md:text-left font-bold">
           {{ $t('ttd.tweentyEightDayCountDown') }}
           <span class="text-primary-400 font-bold">
             {{ formatTime(predictCurveTweentyEightDay) }}
@@ -144,8 +144,8 @@ export default {
         yAxis: {
           name: '1e22',
           type: 'value',
-          min: 5.5,
-          max: 6.3
+          min: 5.1,
+          max: 6.4
         },
         series: [
           {
@@ -154,6 +154,14 @@ export default {
             smooth: true,
             symbolSize: 0,
             data: this.data.origin_curve[1]?.map(item => BN(item).div(1e22).toNumber()) || [],
+            itemStyle: {
+              normal: {
+                lineStyle: {
+                  width: 2,
+                  type: 'dotted'
+                }
+              }
+            },
             markLine: {
               silent: true,
               lineStyle: {
