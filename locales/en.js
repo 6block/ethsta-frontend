@@ -12,9 +12,9 @@ export default {
   ttd: {
     title: 'TTD Curve Predict',
     remain: 'remaning',
-    sevenDayCountDown: '7 day‘s ma expected at',
-    fourteenDayCountDown: '14 day‘s ma expected at',
-    tweentyEightDayCountDown: '28 day‘s ma expected at'
+    sevenDayCountDown: '7 day‘s data expected at',
+    fourteenDayCountDown: '14 day‘s data expected at',
+    tweentyEightDayCountDown: '28 day‘s data expected at'
   },
   depositValidatorChart: {
     title: 'Deposit Balance & Validators',

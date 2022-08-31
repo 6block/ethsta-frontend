@@ -129,7 +129,7 @@ export default {
           }
         },
         legend: {
-          data: ['TTD', 'Origin Curve', 'Predict Curve 7d', 'Predict Curve 14d', 'Predict Curve 28d']
+          data: ['Origin Curve', 'Predict Curve 7d', 'Predict Curve 14d', 'Predict Curve 28d']
         },
         grid: {
           left: 80,
@@ -144,10 +144,31 @@ export default {
         yAxis: {
           name: '1e22',
           type: 'value',
-          min: 5.1,
+          min: 5,
           max: 6.4
         },
         series: [
+          {
+            name: 'Predict Curve 7d',
+            type: 'line',
+            smooth: true,
+            symbolSize: 0,
+            data: this.data.predict_curves[1]?.data.map(item => BN(item).div(1e22).toNumber()) || []
+          },
+          {
+            name: 'Predict Curve 14d',
+            type: 'line',
+            smooth: true,
+            symbolSize: 0,
+            data: this.data.predict_curves[2]?.data.map(item => BN(item).div(1e22).toNumber()) || []
+          },
+          {
+            name: 'Predict Curve 28d',
+            type: 'line',
+            smooth: true,
+            symbolSize: 0,
+            data: this.data.predict_curves[3]?.data.map(item => BN(item).div(1e22).toNumber()) || []
+          },
           {
             name: 'Origin Curve',
             type: 'line',
@@ -179,27 +200,6 @@ export default {
               },
             },
           },
-          {
-            name: 'Predict Curve 7d',
-            type: 'line',
-            smooth: true,
-            symbolSize: 0,
-            data: this.data.predict_curves[1]?.data.map(item => BN(item).div(1e22).toNumber()) || []
-          },
-          {
-            name: 'Predict Curve 14d',
-            type: 'line',
-            smooth: true,
-            symbolSize: 0,
-            data: this.data.predict_curves[2]?.data.map(item => BN(item).div(1e22).toNumber()) || []
-          },
-          {
-            name: 'Predict Curve 28d',
-            type: 'line',
-            smooth: true,
-            symbolSize: 0,
-            data: this.data.predict_curves[3]?.data.map(item => BN(item).div(1e22).toNumber()) || []
-          }
         ]
       }
       this.ttdChart = this.$echarts.init(document.getElementById('ttd-chart'))
