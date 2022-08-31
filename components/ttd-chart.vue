@@ -149,31 +149,35 @@ export default {
         },
         series: [
           {
-            name: 'Predict Curve 7d',
+            name: 'Predict Curve 28d',
             type: 'line',
             smooth: true,
             symbolSize: 0,
-            data: this.data.predict_curves[1]?.data.map(item => BN(item).div(1e22).toNumber()) || []
+            z: 1,
+            data: this.data.predict_curves[3]?.data.map(item => BN(item).div(1e22).toNumber()) || []
           },
           {
             name: 'Predict Curve 14d',
             type: 'line',
             smooth: true,
             symbolSize: 0,
+            z: 2,
             data: this.data.predict_curves[2]?.data.map(item => BN(item).div(1e22).toNumber()) || []
           },
           {
-            name: 'Predict Curve 28d',
+            name: 'Predict Curve 7d',
             type: 'line',
             smooth: true,
             symbolSize: 0,
-            data: this.data.predict_curves[3]?.data.map(item => BN(item).div(1e22).toNumber()) || []
+            z: 3,
+            data: this.data.predict_curves[1]?.data.map(item => BN(item).div(1e22).toNumber()) || []
           },
           {
             name: 'Origin Curve',
             type: 'line',
             smooth: true,
             symbolSize: 0,
+            z: 4,
             data: this.data.origin_curve[1]?.map(item => BN(item).div(1e22).toNumber()) || [],
             itemStyle: {
               normal: {
