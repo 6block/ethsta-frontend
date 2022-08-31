@@ -58,6 +58,8 @@
 import moment from 'moment'
 import BigNumber from 'bignumber.js'
 const BN = BigNumber.clone()
+let ttdChart = null
+let hashrateChart = null
 export default {
   computed: {
     predictCurveSevenDay() {
@@ -95,8 +97,11 @@ export default {
   },
   mounted() {
     window.onresize = () => {
-      if (this.ttdChart) {
-        this.ttdChart.resize()
+      if (ttdChart) {
+        ttdChart.resize()
+      }
+      if (hashrateChart) {
+        hashrateChart.resize()
       }
     }
     this.initTtdChart()
@@ -206,8 +211,8 @@ export default {
           },
         ]
       }
-      this.ttdChart = this.$echarts.init(document.getElementById('ttd-chart'))
-      this.ttdChart.setOption(option)
+      ttdChart = this.$echarts.init(document.getElementById('ttd-chart'))
+      ttdChart.setOption(option)
     },
     initHashRateChart() {
       const option = {
@@ -248,8 +253,8 @@ export default {
           },
         ]
       }
-      this.hashRateChart = this.$echarts.init(document.getElementById('hashrate-chart'))
-      this.hashRateChart.setOption(option)
+      hashrateChart = this.$echarts.init(document.getElementById('hashrate-chart'))
+      hashrateChart.setOption(option)
     }
   }
 }
