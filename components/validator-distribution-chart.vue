@@ -6,6 +6,8 @@
   </div>
 </template>
 <script>
+let chart = null
+let mobileChart = null
 export default {
   props: {
     list: {
@@ -21,9 +23,9 @@ export default {
   },
   mounted() {
     window.onresize = () => {
-      if (this.chart) {
-        this.chart.resize()
-        this.mobileChart.resize()
+      if (chart) {
+        chart.resize()
+        mobileChart.resize()
       }
     }
     const mobileOption = {
@@ -87,10 +89,10 @@ export default {
       ]
     }
 
-    this.chart = this.$echarts.init(document.getElementById('validator-distribution-chart'))
-    this.mobileChart = this.$echarts.init(document.getElementById('validator-distribution-mobile-chart'))
-    this.chart.setOption(option)
-    this.mobileChart.setOption(mobileOption)
+    chart = this.$echarts.init(document.getElementById('validator-distribution-chart'))
+    mobileChart = this.$echarts.init(document.getElementById('validator-distribution-mobile-chart'))
+    chart.setOption(option)
+    mobileChart.setOption(mobileOption)
   }
 }
 </script>

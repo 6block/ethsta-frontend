@@ -5,6 +5,7 @@
   </div>
 </template>
 <script>
+let chart = null
 export default {
   props: {
     stakeValidator: {
@@ -18,15 +19,10 @@ export default {
       },
     },
   },
-  data() {
-    return {
-      chart: null
-    }
-  },
   mounted() {
     window.onresize = () => {
-      if (this.chart) {
-        this.chart.resize()
+      if (chart) {
+        chart.resize()
       }
     }
     const option = {
@@ -85,8 +81,8 @@ export default {
         }
       ]
     }
-    this.chart = this.$echarts.init(document.getElementById('deposit-validator-chart'))
-    this.chart.setOption(option)
+    chart = this.$echarts.init(document.getElementById('deposit-validator-chart'))
+    chart.setOption(option)
   }
 }
 </script>

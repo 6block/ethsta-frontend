@@ -5,7 +5,10 @@
     <div id="entity-validators-mobile-chart" class="md:hidden h-128"></div>
   </div>
 </template>
-<script>import moment from 'moment'
+<script>
+import moment from 'moment'
+let chart = null
+let mobileChart = null
 
 export default {
   props: {
@@ -16,17 +19,11 @@ export default {
       },
     },
   },
-  data() {
-    return {
-      chart: null,
-      mobileChart: null
-    }
-  },
   mounted() {
     window.onresize = () => {
-      if (this.chart) {
-        this.chart.resize()
-        this.mobileChart.resize()
+      if (chart) {
+        chart.resize()
+        mobileChart.resize()
       }
     }
     let timestamp = new Set()
@@ -104,11 +101,11 @@ export default {
       ],
       series: series.reverse()
     }
-    this.chart = this.$echarts.init(document.getElementById('entity-validators-chart'))
-    this.mobileChart = this.$echarts.init(document.getElementById('entity-validators-mobile-chart'))
-    this.chart.setOption(option)
+    chart = this.$echarts.init(document.getElementById('entity-validators-chart'))
+    mobileChart = this.$echarts.init(document.getElementById('entity-validators-mobile-chart'))
+    chart.setOption(option)
     option.grid.top = 160
-    this.mobileChart.setOption(option)
+    mobileChart.setOption(option)
   }
 }
 </script>

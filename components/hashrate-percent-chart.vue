@@ -6,6 +6,8 @@
   </div>
 </template>
 <script>
+let chart = null
+let mobileChart = null
 export default {
   props: {
     dataSet: {
@@ -15,17 +17,11 @@ export default {
       },
     },
   },
-  data() {
-    return {
-      chart: null,
-      mobileChart: null
-    }
-  },
   mounted() {
     window.onresize = () => {
-      if (this.chart) {
-        this.chart.resize()
-        this.mobileChart.resize()
+      if (chart) {
+        chart.resize()
+        mobileChart.resize()
       }
     }
     if (!this.dataSet.timelines) {
@@ -131,10 +127,10 @@ export default {
       ],
       series: series.reverse(),
     }
-    this.chart = this.$echarts.init(document.getElementById('hashrate-percent-chart'))
-    this.mobileChart = this.$echarts.init(document.getElementById('hashrate-percent-mobile-chart'))
-    this.chart.setOption(option)
-    this.mobileChart.setOption(option)
+    chart = this.$echarts.init(document.getElementById('hashrate-percent-chart'))
+    mobileChart = this.$echarts.init(document.getElementById('hashrate-percent-mobile-chart'))
+    chart.setOption(option)
+    mobileChart.setOption(option)
   }
 }
 </script>
