@@ -11,7 +11,7 @@ export default {
   },
   ttd: {
     title: 'TTD Curve Predict',
-    remain: 'remaning',
+    remain: 'remaining',
     sevenDayCountDown: '7 day‘s data expected at',
     fourteenDayCountDown: '14 day‘s data expected at',
     tweentyEightDayCountDown: '28 day‘s data expected at'
