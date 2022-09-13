@@ -56,7 +56,7 @@
               {{ $t("overview.totalDeposit") }}
             </h1>
             <p class="text-primary-400 font-bold pt-1 text-sm">
-              {{ overview.total_deposit | eth(4) }}
+              {{ overview.total_deposit | locale }} ETH
             </p>
           </div>
         </div>
