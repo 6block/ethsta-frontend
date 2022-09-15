@@ -115,7 +115,7 @@ export default {
   },
   methods: {
     formatTime(time) {
-      return moment(time * 1000).format('YYYY-MM-DD HH:MM')
+      return moment(new Date(time * 1000)).format('YYYY-MM-DD HH:mm')
     },
     initTtdChart() {
       const option = {
