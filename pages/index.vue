@@ -3,7 +3,7 @@
     <Header />
     <div class="lg:w-240 mx-auto">
       <Overview :overview="overview" />
-      <TtdChart :data="ttdPredict" />
+      <!-- <TtdChart :data="ttdPredict" /> -->
       <EntityValidatorsChart :list="entityValidators" />
       <DepositValidatorChart :stake-validator="stakeValidator" />
       <ValidatorDistributionChart :list="validatorDistribution" />
@@ -20,7 +20,8 @@ export default {
   async asyncData({ $axios, error }) {
     try {
       const overview = await $axios.$get('/overview')
-      const ttdPredict = await $axios.$get('/predict-eth2-hardfork')
+      // const ttdPredict = await $axios.$get('/predict-eth2-hardfork')
+      console.log(ttdPredict.predict_curves)
       const validatorDistribution = await $axios.$get('/validator-distribution')
       const entityValidators = await $axios.$get('/entity-stake-validator')
       let stakeValidator = await $axios.$get('/stake-validator')
@@ -36,7 +37,7 @@ export default {
         validatorDistribution,
         stakeValidator,
         detail,
-        ttdPredict,
+        // ttdPredict,
         entityValidators,
         hashratePercent
       }
