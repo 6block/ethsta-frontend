@@ -21,7 +21,6 @@ export default {
     try {
       const overview = await $axios.$get('/overview')
       // const ttdPredict = await $axios.$get('/predict-eth2-hardfork')
-      console.log(ttdPredict.predict_curves)
       const validatorDistribution = await $axios.$get('/validator-distribution')
       const entityValidators = await $axios.$get('/entity-stake-validator')
       let stakeValidator = await $axios.$get('/stake-validator')
